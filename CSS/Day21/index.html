@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity</title>
+    <style>
+
+        /* Position and Order */
+        /* Specifity: 1 */
+        h1{
+            color: aqua;
+        }
+
+        /* Specificity: 10 */
+        .yello{
+            color: yellow;
+        }
+
+        /* Specificity: 10 */
+        .cred{
+            color: red;
+        }
+
+        /* Specificity: 10 */
+        .cpurple{
+            color: purple;
+        }
+
+        /* Specity: 10+10=20 */
+        h1.yello{
+            color: red;
+        }
+
+
+
+        /* Specificity: 100 */
+        #para{
+            color: red;
+        }
+
+        /* Importance, Specificity: 10 */
+        .h{
+            color: maroon !important;
+        }
+
+        /* Specifity:  1(a)+10(harry)+10(rohan)+10(href)+1=(hover)=41*/
+        a.harry.rohan[href]:hover{
+            color: aliceblue;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div>
+        <h1 class="yello cred cpurple">CSS Specificity</h1>
+        <p id="para" style="color: blue;">Inline Style > ID Selectors > Class or Atribute Selectors > Element selector > Universal Selector</p>
+
+        <h1 class="h" style="color: magenta;">The Casecading Algorithms</h1>
+        <ol>
+            <li>Position and order of appiarance</li>
+            <li>Specificity</li>
+            <li>Origin</li>
+            <li>Importance</li>
+        </ol>
+
+        <h1>Specificity Calculation</h1>
+        <ul>
+            <li>Universal Selector: 0</li>
+            <li>Element Selector and pesudo Selector: 1</li>
+            <li>Calss, attribue Selector and pesudo classes: 10</li>
+            <li>ID Selector : 100</li>
+            <li>Inline Styles : 1000</li>
+            <li>!Important : 10000</li>
+        </ul>
+    </div>
+</body>
+</html>

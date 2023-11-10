@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.box{
+    background: aqua;
+}
+
+.box1{
+    color: yellow;
+    padding: 10px;
+    border: 2px solid black;
+    margin: 25px;
+    height: 200px;
+    /*
+    Total height= (200+10+10+2+2+5+5)px = height + padding top + padding bottom + border top + border bottom + margin top + margin bottom
+    */
+
+    /*width: 200px;
+    
+    Total width= (200+10+10+2+2+5+5)px  = width + padding right + padding left + border right + border left + margin right + margin left
+    */
+
+    box-sizing: border-box;/* total height= 200px =contant+ border + padding; totla width= 100px = contant+ border + padding;*/
+}
+
+.box2{
+    color: red;
+    padding: 10px;
+    border: 2px solid black;
+    margin: 35px;
+    height: 200px;
+    box-sizing: border-box;
+}
+
+/*
+here box1's margin and box2's margin is collapsing so the maximum margin among them will apply between them
+
+so margin of box2 is greater among both boxes so the margin between box1 and box2 will be 35px.
+*/

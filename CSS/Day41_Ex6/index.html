@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excersise 6</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            height: 1000px;
+        }
+        header{
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            height: 100px;
+        }
+        .container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0px;
+            margin: 0px 50px;
+        }
+        ul{
+            list-style: none;
+            display: flex;
+        }
+        li{
+            margin-right: 25px;
+            font-family: Arial;
+            cursor: pointer;
+        }
+        li:hover{
+            color: rgb(92, 92, 92);
+        }
+
+        .menu{
+            display: flex;
+        }
+        .logo{
+            height: 60px;
+            cursor: pointer;
+        }
+        .translate{
+            height: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img class="logo" src="Dark-logo.png" alt="">
+            </div>
+            <div class="menu">
+                <ul>
+                    <li>Products</li>
+                    <li>Pricing </li>
+                    <li>Resources </li>
+                    <li>About us </li>
+                </ul>
+                <img class="translate" src="translator.png" alt="">
+            </div>
+        </div>
+    </header>
+</body>
+</html>

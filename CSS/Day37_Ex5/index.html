@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise 5 Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        :root{
+            --ulbackColor: rgb(16, 82, 130);
+            --hover: rgb(139, 241, 238);
+            --hovercolor:  rgb(109, 109, 109);
+        }
+        body{
+            position: absolute;
+            font-family: Arial;
+            background-color: rgb(166, 217, 235);
+            width: 100vw;
+        }
+        
+        nav{
+            position: fixed;
+            width: 100%;
+            z-index: 1;
+        }
+        
+        ul {
+            display: flex;
+            list-style: none;
+            background-color: var(--ulbackColor);
+            color: white;
+            justify-content:center;
+        }
+        li{
+            font-size: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        li:hover{
+            background-color: var(--hover);
+            color: var(--hovercolor);
+        }
+
+        .fixed-icon{
+            height: 50px;
+            width: 50px;
+            position: fixed;
+            z-index: 2;
+            background-color: red;
+            border-radius: 50px;
+            margin-left: 90vw;
+            margin-top: 90vh;
+        }
+
+        
+        .container{
+            background-color: rgb(115, 93, 93);
+            position: relative;
+            margin-top: 50px;
+            margin-left: 10px;
+            margin-right: 10px;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+        .box1{
+            width: 50%;
+            height: 700px;
+            background-color: yellow;
+            margin: 5px;
+        }
+        .box2{
+            width: 50%;
+            height: 700px;
+            background-color: aqua;
+            margin: 5px;
+        }
+        
+
+        
+        .rectangle{
+            border: 2px solid black;
+            margin: 10px;
+            padding-top: 5px;
+            padding-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            border-radius: 25px;
+            background-color: rgb(102, 141, 141);
+        }
+        .rectangle p{
+            color: white;
+            font-size: 25px;
+        }
+
+        .dev-contact{
+            border: 2px solid black;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            background-color: rgb(245, 248, 245);
+        }
+        p {
+            font-size: 15px;
+            margin-right: 10px;
+            color: gray;
+            margin-top: 5px;
+        }
+        span{
+            font-weight: bold;
+            color: black;
+            margin-right: 10px;
+        }
+        img{
+            height: 30px;
+            width: 30px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .insta{
+            height: 31px;
+        }
+        .x{
+            height: 20px;
+            width: 20px;
+            margin-top: 5px;
+        }
+        .lin{
+            height: 25px;
+            width: 25px;
+            margin-top: 3px;
+        }
+        .copy{
+            margin-right: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+                <li>Services</li>
+                <li>Gallery</li>
+                <li>FAQ</li>
+                <li>Admin</li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="fixed-icon"></div>
+    
+        <div class="container">
+            <div class="box1">
+
+            </div>
+            <div class="box2">
+
+            </div>
+        </div>
+
+        
+        <div class="rectangle">
+            <p>
+                Welcome to sigma web development course by Harry Bhai
+            </p>
+        </div>
+    </main>
+
+    
+    <footer>
+        <div class="dev-contact">
+            <p class="copy">© 2023 Sigma Web Dev Expres All rights reserved</p>
+            <p>
+                Made by: <span>Aditya Kumar</span>  
+            </p>
+            <p>
+                Socials:
+            </p>
+            <img class="insta" src="insta.jpeg" alt="instagram">
+            <img class="x" src="x.png" alt="tweeter">
+            <img class="lin" src="lin.jpeg" alt="Linked In">
+        </div>
+    </footer>
+</body>
+</html>

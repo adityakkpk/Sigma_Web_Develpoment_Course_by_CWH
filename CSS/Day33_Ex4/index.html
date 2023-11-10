@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 4</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* :root{
+            --bodyBC: rgb(0, 255, 255);
+            --ulColor: rgb(231, 71, 194);
+            --hover: rgb(168, 241, 139);
+            --hoverfc: rgb(103, 174, 225);
+            --defpadd: 10px;
+            --opac: 1.2;
+        } */
+        :root{
+            --bodyBC: rgb(229, 155, 155);
+            --ulColor: rgb(16, 82, 130);
+            --hover: rgb(139, 241, 238);
+            --hoverfc: rgb(132, 184, 222);
+            --defpadd: 10px;
+            --opac: 1.2;
+        }
+        body {
+            background-color: var(--bodyBC);
+        }
+        ul {
+            display: flex;
+            list-style: none;
+            background-color: var(--ulColor);
+            font-family: Arial;
+            color: white;
+        }
+        li{
+            padding: var(--defpadd);
+            font-weight: bold;
+            cursor: pointer;
+        }
+        li:first-child{
+            --color: rgb(131, 98, 172);
+            background-color: var(--color);
+            opacity: var(--opac);
+        }
+        li:first-child:hover{
+            background-color: var(--hoverfc);
+        }
+        li:hover{
+            background-color: var(--hover);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Contact</li>
+            <li>About</li>
+            <li>Services</li>
+        </ul>
+    </nav>
+</body>
+</html>

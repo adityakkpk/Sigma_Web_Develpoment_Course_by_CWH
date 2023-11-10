@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sizing</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html{/*html is root*/
+            font-size: 12px;
+        }
+        .box{
+            box-sizing: border-box;
+            border: 2px solid black;
+            /* width: 233px; */
+            width: 100vw;
+            background-color: aquamarine;
+        }
+        .container{
+            box-sizing: border-box;
+            border: 2px solid black;
+            /* width: 233px; */
+            /* width: 80vh;
+            height: 80vh; */
+            min-width: 80vh;
+            min-height: 80vh;
+            /*
+            vh = view-height 
+            vw = view-width 
+            */
+            margin: 23px auto;
+            /* font-size: 18px; 16px is default size of fonts */
+            background-color: aquamarine;
+        }
+        .container > div{
+
+            width: 50%;/*It will depend on its parent*/
+            border: 2px solid;
+
+            /* font-size: 3em; 
+            
+            It will inharit the font size from .container.
+            and Multiply it with the value given.
+            so here total font size is 16*1.5 =24.
+            */
+
+
+
+            /*
+            font-size: 2rem;
+
+            
+            It will inharit the font size from root.
+            and Multiply it with the value given.
+            so here total font size is 12*2 =24.
+            */
+        }
+
+        .container > div > p {
+            width: 50%;
+            border: 2px solid rebeccapurple;
+        }
+
+        .mycont{
+            box-sizing: border-box;
+            margin: 23px auto;
+            border: 2px solid black;
+            color: red;
+            font-size: 22px;
+            width: 80vw;
+            /*
+            for devices which have height is low with respect to their width then theit view-minimum(vmin) = height 
+            (so in some case vmin = vh)
+
+
+            for devices which have width is low with respect to their height then theit view-minimum(vmin) = width 
+            (so in some case vmin = vw)
+            */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        This is a box
+    </div>
+    <div class="container">
+        <div>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque molestias sint neque dignissimos quibusdam. Id, architecto? Quis sit minus reiciendis voluptate quasi impedit architecto quae placeat magnam provident obcaecati alias quidem velit aut exercitationem ex dolorum, enim numquam? Sapiente quisquam perferendis obcaecati ea, aperiam nesciunt!
+
+            <p>
+                 Bho Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur deserunt suscipit voluptate tempora nobis iusto, asperiores cumque? Nesciunt distinctio officia provident eos, repudiandae ut accusantium perspiciatis consectetur doloribus vel voluptas aliquam enim magni adipisci, non repellendus. Ipsam repellendus deleniti quas ab pariatur commodi suscipit doloribus!
+            </p>
+        </div>
+
+        dio distinctio voluptatem sit ipsam cumque beatae, aliquam nam. Quod voluptatibus tempora dolore magni maiores nobis, impedit quam nulla ipsa ex unde ipsum, atque voluptatem doloremque cum provident inventore adipisci recusandae animi corporis libero. Consectetur placeat illum ipsum non labore cum laborum ut quasi suscipit laboriosam, culpa et repellendus quod nostrum qui ad eum rerum vero excepturi dolore ullam nemo! Accusamus placeat vero eos impedit possimus expedita. Aperiam quisquam iusto quam eaque, autem voluptates quas vitae minus vero veritatis iure tempore tempora nesciunt nihil fugit, illum officia quia necessitatibus consequatur alias similique? Dicta eveniet esse nostrum, iste veritatis quam deleniti omnis voluptatum mollitia rerum voluptatibus quis aspernatur perspiciatis. Reprehenderit illum minima vero nulla tenetur error magnam adipisci, numquam ex dolore quis, deleniti reiciendis corporis in earum sint ut consectetur odio ipsa nam? Veritatis mollitia at debitis, vitae error quos quo culpa, soluta ab nemo est excepturi voluptas similique beatae corrupti iste alias laudantium architecto impedit! Odit facere dolores possimus laboriosam dolor necessitatibus, dolore nemo, doloribus sint nulla, distinctio nostrum pariatur suscipit minima aliquam qui eaque incidunt quibusdam harum blanditiis in similique amet officiis. Soluta mollitia sunt corrupti repudiandae, consectetur id omnis maiores architecto perferendis voluptatibus rem. Eum laboriosam dolorem adipisci, porro id hic error nulla deserunt accusantium ipsum nisi quisquam voluptates, eos, odit similique aperiam culpa ratione illo. Non dolores ea magni ipsa natus totam adipisci magnam soluta, cumque corrupti ratione minima delectus dignissimos repellat! Ea qui aperiam, aspernatur minima pariatur consectetur quaerat, nesciunt doloribus perferendis, obcaecati laborum sequi eius exercitationem enim. Sapiente quia adipisci nisi praesentium quod.
+    </div>
+    <div class="mycont">
+        i am another container
+    </div>
+</body>
+</html>

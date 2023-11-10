@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flex Box</title>
+    <style>
+        
+        .container{
+            border: 2px solid red;
+            height: 80vh;
+
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
+            /* flex-direction: column; */
+            /* 
+            flex-direction: row; ---> Main Axix direction will be left to right   
+            flex-direction: Column; ---> Main Axix direction will be top to bottom */
+
+            flex-wrap: wrap;
+            /* flex-wrap: wrap-reverse; */
+            /* Wraps oveflow items into container */
+            /* align-content: flex-start; */
+
+            flex-flow: row wrap;
+            /* flex-dirextion and flex-wrap */
+
+            /* gap: 30px; */
+            /* row-gap: 30px; */
+            /* column-gap: 10px; */
+            gap: 20px 10px;
+
+        }
+        .item{
+            height: 32px;
+            width: 32px;
+            background-color: blueviolet;
+            border: 2px solid black;
+            /* margin: 4px; */
+
+            /* flex-grow: 1; */
+            /* It Divides emply space equally */
+        }
+        .item1{
+            /* flex-grow: 5; */
+
+            /* flex-shrink: 2; */
+            /* Item will shring with 2x speed */
+            /* flex-shrink: 3; */
+            /* Item will shring with 2x speed */
+
+            /* align-self: flex-start; 
+            Used for particular item allignment
+            */
+            align-self: flex-end;
+        }
+
+        .order-1{
+            order: 1;
+        }
+        .order-2{
+            order: 2;
+        }
+        .order-3{
+            order: 3;
+        }
+        /* 
+        heigher the order, item will come later
+        default order = 0
+        */
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="item item1">1</div>
+            <div class="item order-3">2</div>
+            <div class="item order-2">3</div>
+            <div class="item order-1">4</div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item order-1">66</div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+    </main>
+</body>
+</html>

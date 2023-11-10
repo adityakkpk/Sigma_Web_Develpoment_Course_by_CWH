@@ -1,0 +1,41 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Poppins&display=swap');
+
+h1 {
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    font-family: 'Poppins', sans-serif;
+}
+
+h2{
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-color: black;
+    /* text-decoration-style: dotted; */
+    text-decoration-thickness: 5px;
+    /* text-indent: 45px; */
+}
+
+p {
+    /*
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-style: oblique;
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration: overline; 
+    */
+
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 20px;
+    line-height: 1.8;/*space between lines*/
+    letter-spacing: 3px;/*space between letters*/
+}
+
+.lorem {
+    border: 2px solid red;
+    width: 45px;
+    /* text-overflow: clip;
+    overflow: hidden; */
+    word-break: break-all;
+    text-align: center;
+}
