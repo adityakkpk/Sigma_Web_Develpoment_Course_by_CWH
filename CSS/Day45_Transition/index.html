@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Transition porperty</title>
+    <style>
+        .container{
+            background-color: rgb(121, 83, 34);
+            width: 50vw;
+            height: 40vh;
+        }
+        .box{
+            background-color: aquamarine;
+            width: 5vw;
+            height: 4vh;
+            /* 
+            transition-property: transform;
+            transition-property: transform,background-color;
+            transition-property: all;
+            transition-duration: 3s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 1s; 
+            */
+            transition: transform 2s ease-in-out 0.5s;
+        }
+
+        .box:hover{
+            transform: translateX(10vh) translateY(10vh) scale(3);
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>
