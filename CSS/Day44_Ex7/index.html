@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise 7</title>
+    <style>
+        *,p{
+            margin: 0;
+            padding: 0;
+        }
+        
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        header{
+            display: flex;
+            justify-content: center;
+            height: 100px;
+        }
+        .container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0px 50px;
+            width: 1220px;
+        }
+
+        ul{
+            list-style: none;
+            display: flex;
+        }
+        li{
+            margin-right: 25px;
+            font-family: Arial;
+            cursor: pointer;
+        }
+        li:hover{
+            color: rgb(92, 92, 92);
+        }
+        
+        .menu{
+            display: flex;
+        }
+        .logo{
+            height: 60px;
+            cursor: pointer;
+        }
+        .translate{
+            height: 20px;
+            cursor: pointer;
+        }
+
+        .hamburger-menu{
+            opacity: 0;
+            height: 5px;
+            position: absolute;
+        }
+
+        main{
+            display: flex;
+            justify-content: center;
+        }
+
+        main section{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            margin-top: 30px;
+            padding: 10px;
+            width: 1000px;
+        }
+
+        main section .download-section{
+            background-color: rgb(240, 240, 240);
+            padding: 10px;
+            margin: 50px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 5px;
+            position: relative;
+        }
+        
+        .language{
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .sub-language{
+            position: absolute;
+            top: 60px;
+            font-size: 13px;
+        }
+
+        main section .download-section div{
+            margin-top: 50px;
+            margin-bottom: 5px;
+        }
+
+        .buttons{
+            display: flex;
+            justify-content: center;
+        }
+
+        .button1{
+            margin-right: 5px;
+            background-color: rgb(0, 187, 255);
+            color: white;
+            border: none;
+            padding: 12px 15px;
+            font-weight: bold;
+            border-radius: 5px;
+            font-size: 13px;
+        }
+        
+        .button2{
+            margin-right: 5px;
+            background-color: rgb(28, 161, 28);
+            color: white;
+            border: none;
+            padding: 12px 15px;
+            font-weight: bold;
+            border-radius: 5px;
+            font-size: 13px;
+        }
+
+        a{
+            text-decoration: none;
+            color: white;
+        }
+
+        @media (max-width:1015px){
+            header{
+                height: 80px;
+            }
+            .container{
+                width: 700px;
+                position: relative;
+            }
+            ul{
+                display: block;
+                position: absolute;
+                opacity: 0;
+            }
+            li{
+                margin-right: 5px;
+                font-size: 5px;
+            }
+            .logo{
+                height: 45px;
+            }
+
+            .hamburger-menu{
+                opacity: 1;
+                position: absolute;
+                height: 30px;
+                right: 20px;
+                cursor: pointer;
+            }
+
+            main section{
+                display: grid;
+                grid-template-columns: 1fr;
+                margin-top: 30px;
+                padding: 10px;
+            }
+            main section .download-section div{
+                margin-top: 70px;
+                margin-bottom: 5px;
+            }
+        }
+
+        </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img class="logo" src="Images/Dark-logo.png" alt="">
+            </div>
+            <div class="menu">
+                <ul>
+                    <li>Products</li>
+                    <li>Pricing </li>
+                    <li>Resources </li>
+                    <li>About us </li>
+                    <img class="translate" src="Images/translator.png" alt="">
+                </ul>
+            </div>
+            <img class="hamburger-menu" src="Images/hamburger-menu.svg" alt="">
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="download-section">
+                <p class="language">English</p>
+                <p class="sub-language"></p>
+                <div class="buttons">
+                    <button class="button1"><a href="ue_english.exe">Download 32-bit</a></button>
+                    <button class="button2"><a href="ue_english.exe">Download 64-bit</a></button>
+                </div>
+            </div>
+
+            <div class="download-section">
+                <p class="language">English</p>
+                <p class="sub-language">English</p>
+                <div class="buttons">
+                    <button class="button1"><a href="ue_english.exe">Download 32-bit</a></button>
+                    <button class="button2"><a href="ue_english.exe">Download 64-bit</a></button>
+                </div>
+            </div>
+
+            <div class="download-section">
+                <p class="language">English</p>
+                <p class="sub-language">English</p>
+                <div class="buttons">
+                    <button class="button1"><a href="ue_english.exe">Download 32-bit</a></button>
+                    <button class="button2"><a href="ue_english.exe">Download 64-bit</a></button>
+                </div>
+            </div>
+
+            <div class="download-section">
+                <p class="language">English</p>
+                <p class="sub-language">English</p>
+                <div class="buttons">
+                    <button class="button1"><a href="ue_english.exe">Download 32-bit</a></button>
+                    <button class="button2"><a href="ue_english.exe">Download 64-bit</a></button>
+                </div>
+            </div>
+
+            <div class="download-section">
+                <p class="language">English</p>
+                <p class="sub-language">English</p>
+                <div class="buttons">
+                    <button class="button1"><a href="ue_english.exe">Download 32-bit</a></button>
+                    <button class="button2"><a href="ue_english.exe">Download 64-bit</a></button>
+                </div>
+            </div>
+
+            <div class="download-section">
+                <p class="language">English</p>
+                <p class="sub-language">English</p>
+                <div class="buttons">
+                    <button class="button1"><a href="ue_english.exe">Download 32-bit</a></button>
+                    <button class="button2"><a href="ue_english.exe">Download 64-bit</a></button>
+                </div>
+            </div>
+
+            <div class="download-section">
+                <p class="language">English</p>
+                <p class="sub-language">English</p>
+                <div class="buttons">
+                    <button class="button1"><a href="ue_english.exe">Download 32-bit</a></button>
+                    <button class="button2"><a href="ue_english.exe">Download 64-bit</a></button>
+                </div>
+            </div>
+
+            <div class="download-section">
+                <p class="language">English</p>
+                <p class="sub-language">English</p>
+                <div class="buttons">
+                    <button class="button1"><a href="ue_english.exe">Download 32-bit</a></button>
+                    <button class="button2"><a href="ue_english.exe">Download 64-bit</a></button>
+                </div>
+            </div>
+
+            <div class="download-section">
+                <p class="language">English</p>
+                <p class="sub-language">English</p>
+                <div class="buttons">
+                    <button class="button1"><a href="ue_english.exe">Download 32-bit</a></button>
+                    <button class="button2"><a href="ue_english.exe">Download 64-bit</a></button>
+                </div>
+            </div>
+
+            <div class="download-section">
+                <p class="language">English</p>
+                <p class="sub-language">English</p>
+                <div class="buttons">
+                    <button class="button1"><a href="ue_english.exe">Download 32-bit</a></button>
+                    <button class="button2"><a href="ue_english.exe">Download 64-bit</a></button>
+                </div>
+            </div>
+
+            <div class="download-section">
+                <p class="language">English</p>
+                <p class="sub-language">English</p>
+                <div class="buttons">
+                    <button class="button1"><a href="ue_english.exe">Download 32-bit</a></button>
+                    <button class="button2"><a href="ue_english.exe">Download 64-bit</a></button>
+                </div>
+            </div>
+
+        </section>
+    </main>
+</body>
+</html>
