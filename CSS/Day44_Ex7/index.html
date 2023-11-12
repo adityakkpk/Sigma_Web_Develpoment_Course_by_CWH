@@ -22,7 +22,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin: 0px 50px;
+            margin: 0 7vw;
             width: 1220px;
         }
 
@@ -31,7 +31,7 @@
             display: flex;
         }
         li{
-            margin-right: 25px;
+            margin-right: 4vw;
             font-family: Arial;
             cursor: pointer;
         }
@@ -43,7 +43,10 @@
             display: flex;
         }
         .logo{
-            height: 60px;
+            height: 6vw;
+            max-height: 60px;
+            min-width: 50px;
+            min-height: 40px;
             cursor: pointer;
         }
         .translate{
@@ -52,9 +55,7 @@
         }
 
         .hamburger-menu{
-            opacity: 0;
-            height: 5px;
-            position: absolute;
+            display: none;
         }
 
         main{
@@ -72,7 +73,6 @@
 
         main section .download-section{
             background-color: rgb(240, 240, 240);
-            padding: 10px;
             margin: 50px 20px;
             display: flex;
             flex-direction: column;
@@ -101,6 +101,7 @@
         .buttons{
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
         }
 
         .button1{
@@ -112,6 +113,7 @@
             font-weight: bold;
             border-radius: 5px;
             font-size: 13px;
+            margin-bottom: 3px;
         }
         
         .button2{
@@ -123,6 +125,7 @@
             font-weight: bold;
             border-radius: 5px;
             font-size: 13px;
+            margin-bottom: 3px;
         }
 
         a{
@@ -130,7 +133,7 @@
             color: white;
         }
 
-        @media (max-width:1015px){
+        @media (max-width:850px){
             header{
                 height: 80px;
             }
@@ -138,21 +141,26 @@
                 width: 700px;
                 position: relative;
             }
+
+            .logo{
+                height: 6vw;
+                max-height: 60px;
+                min-height: 50px;
+                cursor: pointer;
+            }
+
             ul{
                 display: block;
                 position: absolute;
-                opacity: 0;
+                display: none;
             }
             li{
                 margin-right: 5px;
                 font-size: 5px;
             }
-            .logo{
-                height: 45px;
-            }
 
             .hamburger-menu{
-                opacity: 1;
+                display: inline;
                 position: absolute;
                 height: 30px;
                 right: 20px;
@@ -163,7 +171,7 @@
                 display: grid;
                 grid-template-columns: 1fr;
                 margin-top: 30px;
-                padding: 10px;
+                padding: 10px 10vw;
             }
             main section .download-section div{
                 margin-top: 70px;
@@ -171,7 +179,7 @@
             }
         }
 
-        </style>
+    </style>
 </head>
 <body>
     <header>
