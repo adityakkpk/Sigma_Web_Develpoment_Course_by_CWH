@@ -1,0 +1,136 @@
+*{
+    font-family: sans-serif;
+}
+body{
+    width: 100%;
+}
+
+
+
+.logo img{
+    width: 180px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Segoe UI";
+}
+
+.right ul {
+    display: flex;
+    gap: 34px;
+}
+
+.right ul li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.right ul li span{
+    padding: 0 5px;
+}
+
+.first {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 70px;
+}
+
+.first span{
+    font-size: 3vw;
+}
+
+.first span img {
+    width:100px;
+    height: 35px;
+    margin: 0 23px;
+}
+
+.first p {
+    font-size: 25px;
+    width: 64vw;
+    text-align: center;
+}
+
+.btn{
+    background-color: #00b6d1;
+    padding: 14px 16px;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    font-weight: bold;
+    max-width: 5px 0;
+    cursor: pointer;
+}
+
+.btn a {
+    text-decoration: none;
+    color: white;
+}
+
+.green{
+    background-color: #5cb85c;
+}
+
+.second {
+    max-width: 70vw;
+    margin: auto;
+}
+
+.flex{
+    display: flex;
+}
+
+.item{
+    padding: 25px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.item-lang{
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 36px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+}
+
+.download{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+
+.download img {
+    padding: 0 12px;
+}
+
+.big{
+    font-size: 25px;
+    margin-top: -10px;
+}
+
+.small{
+    font-size: 12px;
+}
+
+@media screen and (max-width:1145px) {
+    .grid{
+        grid-template-columns: 1fr;
+    }
+}
+
