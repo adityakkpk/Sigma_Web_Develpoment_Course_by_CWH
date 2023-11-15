@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex8_Bounce</title>
+    <style>
+        .container {
+            position: relative;
+            height: 80vh;
+            width: 80vw;
+            background-color: crimson;
+        }
+
+        .box {
+            height: 120px;
+            width: 120px;
+            background-color: rgb(4, 212, 249);
+            border-radius: 60px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            animation: bounce 3s linear infinite alternate;
+        }
+
+        /* @keyframes bounce {
+            0%{
+                translate: 0px 0px;
+            }
+            25%{
+                translate: 200px -200px;
+            }
+            50%{
+                translate: 400px 0px;
+            }
+            75%{
+                translate: 600px -200px;
+            }
+            100%{
+                translate: 800px 0px;
+            }
+        } */
+
+        @keyframes bounce {
+            0% {
+                left: 0;
+                bottom: 0;
+            }
+
+            25% {
+                left: 10%;
+                bottom: 20%;
+            }
+
+            50% {
+                left: 30%;
+                bottom: 0%;
+            }
+
+            75% {
+                left: 60%;
+                bottom: 20%;
+            }
+
+            100% {
+                left: 90%;
+                bottom: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>
