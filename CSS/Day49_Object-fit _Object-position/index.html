@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object-fit and position</title>
+    <style>
+        .container{
+            width: 400px;
+            height: 300px;
+            border: 2px solid black;
+            background-image: url("https://resources.pulse.icc-cricket.com/photo-resources/2023/08/08/4ab1fe5f-0b40-48c4-aa04-4d809b042e4d/ICC-Men-s-CWC-2023-Trophy-Tour-Barbados_Pic-1.jpg?width=985&height=580");
+            /* background-position: center center; */
+            /* background-repeat: repeat-x; */
+            /* background-repeat: no repeat; */
+        }
+        
+        img{
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            object-position: 50% 50%;
+            /* object-position: 10px 20px; */
+            /* object-position: bottom left; */
+            /* object-fit: fill; */
+            /* object-position: top right; */
+            /* object-fit: contain; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <img src="https://resources.pulse.icc-cricket.com/photo-resources/2023/08/08/4ab1fe5f-0b40-48c4-aa04-4d809b042e4d/ICC-Men-s-CWC-2023-Trophy-Tour-Barbados_Pic-1.jpg?width=985&height=580" alt=""> -->
+    </div>
+</body>
+</html>
