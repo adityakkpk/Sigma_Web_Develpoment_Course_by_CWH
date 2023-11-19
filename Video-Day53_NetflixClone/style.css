@@ -3,7 +3,6 @@
 *{
     margin: 0;
     padding: 0;
-
 }
 
 body {
@@ -39,7 +38,7 @@ nav {
 }
 
 nav img {
-    color: red;
+    /* color: red; */
     width: 150px;
     position: relative;
     z-index: 10;
@@ -86,4 +85,41 @@ nav button{
 .separation{
     height: 7px;
     background-color: rgb(48, 48, 48);
+}
+
+.btn{
+    padding: 8px 12px;
+    background-color: #fff;
+    border-radius: 4px;
+    border: none;
+}
+
+.btn-red{
+    background-color: red;
+    color: white;
+    font-size: 18px;
+    padding: 10px 23px;
+    font-weight: 550;
+}
+
+.btn-red-sm{
+    background-color: red;
+    color: white;
+    font-size: 15px;
+}
+
+.main input{
+    padding: 13px 100px 13px 10px;
+    font-size: 12px;
+    border-radius: 4px;
+    background-color: rgba(23,23,23,0.7);
+    font-weight: 900;
+    border: 1px solid rgba(246,238,238,0.3);
+}
+
+.hero-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 23px;
 }
