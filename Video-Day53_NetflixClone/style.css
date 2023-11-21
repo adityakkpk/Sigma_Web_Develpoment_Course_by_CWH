@@ -12,7 +12,7 @@ body {
 
 .main{
     background-image: url("assets/images/background.jpg");
-    height: 644px;
+    height: 700px;
     background-position: center center;
     background-size: max(1200px, 100vw);
     background-repeat: no-repeat;
@@ -20,7 +20,7 @@ body {
 }
 
 .main .box {
-    height: 644px;
+    height: 700px;
     width: 100%;
     position: absolute;
     top: 0;
@@ -52,14 +52,14 @@ nav button{
 .hero {
     height: calc(100% - 100px);
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-direction: column;
     color: white;
     position: relative;
     gap: 23px;
-    padding: 30px;
+    padding: 30px 30px 0 30px;
     text-align: center;
+    margin-bottom: -35px;
 }
 
 .hero> :nth-child(1){
@@ -88,7 +88,7 @@ nav button{
 }
 
 .btn{
-    padding: 8px 12px;
+    padding: 5px 12px;
     background-color: rgba(245, 245, 245, 0.125);
     border-radius: 4px;
     color: white;
@@ -100,7 +100,7 @@ nav button{
 .btn-red{
     background-color: red;
     font-size: 18px;
-    padding: 10px 23px;
+    padding: 7px 23px;
     font-weight: 550;
     border: none;
 }
@@ -134,6 +134,7 @@ nav button{
     margin: auto;
     color: white;
     align-items: center;
+    padding-bottom: 50px;
 }
 
 .secImg{
@@ -194,7 +195,7 @@ section.first > div :nth-child(2){
     align-items: center;
     background-color: rgb(31, 31, 31);
     padding: 20px;
-    max-width: 80vw;
+    max-width: 75vw;
     margin: 15px auto;
     cursor: pointer;
     transition: all 0.15s ease;
@@ -268,15 +269,20 @@ footer h5{
         flex-direction: column;
     }
 
+    .hero{
+        margin-bottom: -42px;
+        gap: 15px;
+    }
+
     .first{
         flex-wrap: wrap;
     }
     
     .faq{
-        font-size: 16px;
+        font-size: 15px;
     }
     .faq h2 {
-        font-size: 32px;
+        font-size: 30px;
     }
     .secImg img {
         width: 305px;
@@ -306,6 +312,14 @@ footer h5{
         font-size: 18px;
     }
     
+    section.first > div :nth-child(1){
+        font-size: 30px;
+    }
+    
+    section.first > div :nth-child(2){
+        font-size: 15px;
+    }
+
     footer{
         max-width: 90vw;
         margin: 50px auto;
