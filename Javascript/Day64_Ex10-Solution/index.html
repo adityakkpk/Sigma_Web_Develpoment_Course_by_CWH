@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex10-Solution</title>
+</head>
+<body>
+
+    <script>
+        let first, second, third;
+        
+        let rand = Math.random();
+        if(rand<0.33){
+            first = 'Crazy';
+        } else if(rand>=0.33 && rand<0.66) {
+            second = 'Amazing';
+        } else {
+            third = 'Fire';
+        }
+        
+        rand = Math.random();
+        if(rand < 0.33){
+            first = 'Engines';
+        } else if(rand>=0.33 && rand<0.66) {
+            second = 'Foods';
+        } else {
+            third = 'Garments';
+        }
+       
+        rand = Math.random();
+        if(rand < 0.33){
+            first = 'Bros';
+        } else if (rand>=0.33 && rand<0.66) {
+            second = 'Limited';
+        } else {
+            third = 'Hub';
+        }
+
+        console.log(`Business names : ${first} ${second} ${third}.`);
+    </script>
+</body>
+</html>
