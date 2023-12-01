@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 10- Factorial</title>
+</head>
+<body>
+    <script>
+        const num = prompt('Enter a number:');
+
+        // Using reduce
+        const array = [];
+        for (let i = 1; i <= num; i++) {
+            array.push(i);
+        }
+
+        const res = array.reduce(
+            (a,b) => a*b
+        );
+        console.log(`Factorial of ${num} is: ${res}`);
+
+        //Using for-loop
+        let factorial=1;
+        for(let i = 1; i<=num;i++){
+            factorial *= i;
+        }
+        console.log(`Factorial of ${num} is: ${factorial}`);
+    </script>
+</body>
+</html>
