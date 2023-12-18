@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex-14 Hacking Simulator</title>
+    <style>
+        body {
+            background-color: green;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <p></p>
+
+    <script>
+        const para = document.querySelector('p');
+
+        const arr = ['Initializing Hacking', 'Reading Files', 'Password files detected', 'Sending all passwords and personal files to the server', 'Cleaning up'];
+
+        function renderText(text){
+            setTimeout(() => {
+                para.innerHTML = text + ' .';
+            }, 500); 
+            setTimeout(() => {
+                para.innerHTML = text + ' ..';
+            }, 1000);
+            setTimeout(() => {
+                para.innerHTML = text + ' ...';
+            }, 1500);
+            setTimeout(() => {
+                para.innerHTML = text + ' .';
+            }, 2000);
+            setTimeout(() => {
+                para.innerHTML = text + ' ..';
+            }, 2500);
+            setTimeout(() => {
+                para.innerHTML = text + ' ...';
+            }, 3000);
+        }
+
+        function promise(text) {
+            return new Promise((resolve) => {
+                let delay = Math.round(1+ Math.random()*6);
+                setTimeout(() => {
+                    renderText(text);
+                    resolve('success');
+                }, delay * 1000);
+            });
+        }
+
+        async function hacking() {
+            for (let index = 0; index < arr.length; index++) {
+                await promise(arr[index]);
+            }
+        }
+
+        hacking();
+
+    </script>
+</body>
+
+</html>
