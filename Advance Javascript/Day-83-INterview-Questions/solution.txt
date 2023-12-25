@@ -1,0 +1,73 @@
+Question 9:
+function placeOrder() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("Order places successfully!");
+    }, 1000 * Math.random() * 7);
+  });
+}
+
+Question 10:
+function brewCoffee(type) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(`${type} Coffee is ready`);
+    }, 1000 * Math.random() * 5);
+  });
+}
+
+Question 11:
+function filterProducts(arr, criteria) {
+  return arr.filter(criteria);
+}
+
+console.log(filterProducts([1, 2, 3, 4, 5, 6], (val) => val > 3));
+console.log(
+  filterProducts(["Saif", "Ansari", "Kaif", "Farhan", "Aman"], (val) =>
+    val.startsWith("A")
+  )
+);
+
+Question 12:
+function setAuthToken(token) {
+  localStorage.setItem(
+    "Authentication token",
+    JSON.stringify({
+      item: token,
+      expiry: new Date().getTime() + 24 * 60 * 60 * 1000,
+    })
+  );
+}
+setAuthToken(59);
+
+Question 13:
+class Item {
+  price;
+  quantity;
+}
+
+function calculateTotal(arr) {
+  let cost = 0;
+  for (let element of arr) {
+    cost += element.price * element.quantity;
+  }
+  return cost;
+}
+
+audi = new Item();
+audi.price = 250000;
+audi.quantity = 2;
+
+mercedes = new Item();
+mercedes.price = 200000;
+mercedes.quantity = 3;
+
+console.log(`Total cost is: ${calculateTotal([audi, mercedes])}`);
+
+Question 14:
+btn.addEventListener("click", () => {
+        window.scroll({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
