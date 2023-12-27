@@ -13,6 +13,7 @@ html, body {
 
 .left {
   width: 25vw;
+  min-width: 300px;
   padding: 5px;
 }
 
@@ -47,25 +48,26 @@ html, body {
 }
 
 .footer {
-  padding: 10px;
+  padding: 50px 20px;
   font-size: 12px;
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 150px;
+  height: 100px;
   background-color: #212121;
 }
 
 .footer .links {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  line-height: 0.2cm;
 }
 
 .footer a {
   text-decoration: none;
-  color: grey;
+  color: rgb(212, 212, 212);
 }
 
 .lang {
@@ -75,10 +77,10 @@ html, body {
   width: fit-content;
   padding: 8px 15px;
   gap: 5px;
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 600;
   border: 1px solid rgb(224, 176, 238);
-  margin-top: 40px;
+  margin-top: 30px;
   border-radius: 30px;
   cursor: pointer;
 }
@@ -86,7 +88,7 @@ html, body {
   width: 20px;
 }
 .lang:hover {
-  transform: scale(1.05);
+  transform: scale(1.04);
   border-color: white;
 }
 
