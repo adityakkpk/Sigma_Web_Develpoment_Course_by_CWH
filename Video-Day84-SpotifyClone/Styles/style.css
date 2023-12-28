@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
 }
 
 html, body {
@@ -9,22 +10,27 @@ html, body {
   width: 100%;
   background-color: black;
   color: white;
+  overflow-y: hidden;
 }
 
 .left {
-  width: 25vw;
+  width: 30vw;
   min-width: 300px;
   padding: 5px;
+  height: 100vh;
 }
 
 .home ul li {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 1.2rem;
   list-style: none;
-  width: 25px;
-  padding-top: 20px;
+  width: 24px;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  font-size: 15px;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .heading {
@@ -32,7 +38,6 @@ html, body {
   align-items: center;
   gap: 15px;
   width: 100%;
-  padding-top: 20px;
   font-weight: 600;
   font-size: 13px;
 }
@@ -42,7 +47,7 @@ html, body {
 }
 
 .library {
-  min-height: 70vh;
+  height: 75vh;
   position: relative;
   overflow: hidden;
 }
@@ -54,7 +59,7 @@ html, body {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 100px;
+  height: 200px;
   background-color: #212121;
 }
 
@@ -94,24 +99,30 @@ html, body {
 
 .right {
   width: 75vw;
-  margin: 10px 0;
-  margin-right: 10px;
-  overflow: hidden;
+  margin: 9px 0;
   background-color: rgb(31, 31, 31);
+  height: 100vh;
+  overflow: scroll;
 }
 
 .nav i {
   background-color: rgb(11, 11, 11);
-  padding: 10px;
+  padding: 8px 10px;
   border-radius: 15px;
   cursor: pointer;
+  margin-left: 5px;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 10px;
+  padding: 8px 20px;
+  position: sticky;
+  z-index: 100;
+  right: 0;
+  left: 0;
+  top: 0;
 }
 
 .sign {
@@ -126,9 +137,80 @@ html, body {
 
 .log {
   border: none;
-  padding: 12px 20px;
+  padding: 12px 30px;
   font-size: 15px;
   font-weight: 600;
   margin-left: 10px;
   border-radius: 25px;
+}
+
+.playlist {
+  padding: 3px 24px;
+}
+
+.playlist h1 {
+  font-size: 1.4rem;
+}
+
+.playlist h1:hover {
+  text-decoration: underline;
+}
+
+.cardContainer {
+  margin-top: 20px;
+  display: flex;
+  gap: 13px;
+  flex-wrap: wrap;
+}
+
+.card {
+  position: relative;
+  width: 190px;
+  border-radius: 10px;
+  padding: 15px;
+  overflow: hidden;
+  background-color: #181818;
+  transition: all 1s;
+}
+
+.play {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  position: absolute;
+  right: 20px;
+  top: 150px;
+  background-color:#1ed760;
+  box-shadow: 5px 5px 20px rgb(38, 38, 38);
+  /* opacity: 0; */
+  transition: all 1s ease-out;
+}
+
+.play img { 
+  height: 25px;
+  width: 25px;
+}
+
+.card:hover {
+  background-color: rgb(69, 69, 69);
+}
+
+.card img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.card h2 {
+  font-size: 0.8rem;
+  margin-top: 10px;
+}
+
+.card p{
+  font-size: 0.8rem;
+  color: #909090;
+  font-weight: 600;
 }

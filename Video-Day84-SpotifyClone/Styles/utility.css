@@ -15,11 +15,6 @@
   align-items: center;
 }
 
-/* .bg-black {
-    background-color: #121212;
-    color: white;
-} */
-
 .invert {
   filter: invert(1);
 }
@@ -33,7 +28,7 @@
 }
 
 .m-1 {
-  margin: 5px;
+  margin: 4px 2px;
 }
 
 .p-1 {
