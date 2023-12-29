@@ -33,6 +33,12 @@ html, body {
   cursor: pointer;
 }
 
+.library {
+  min-height: calc( 98vh - 170px);
+  position: relative;
+  overflow: hidden;
+}
+
 .heading {
   display: flex;
   align-items: center;
@@ -40,26 +46,23 @@ html, body {
   width: 100%;
   font-weight: 600;
   font-size: 13px;
+  position: sticky;
+  background-color: rgb(31, 31, 31);
+  padding: 10px;
 }
 
 .heading img {
   width: 20px;
 }
 
-.library {
-  height: 75vh;
-  position: relative;
-  overflow: hidden;
-}
-
 .footer {
-  padding: 50px 20px;
+  padding: 30px 15px;
   font-size: 12px;
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 200px;
+  height: 150px;
   background-color: #212121;
 }
 
@@ -88,6 +91,7 @@ html, body {
   margin-top: 30px;
   border-radius: 30px;
   cursor: pointer;
+  transition: all 0.15s;
 }
 .lang img {
   width: 20px;
@@ -101,8 +105,13 @@ html, body {
   width: 75vw;
   margin: 9px 0;
   background-color: rgb(31, 31, 31);
-  height: 100vh;
-  overflow: scroll;
+  height: 98vh;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.right::-webkit-scrollbar{
+  display: none;
 }
 
 .nav i {
@@ -185,7 +194,6 @@ html, body {
   top: 150px;
   background-color:#1ed760;
   box-shadow: 5px 5px 20px rgb(38, 38, 38);
-  /* opacity: 0; */
   transition: all 1s ease-out;
 }
 
@@ -213,4 +221,45 @@ html, body {
   font-size: 0.8rem;
   color: #909090;
   font-weight: 600;
+}
+
+.playbar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(192, 195, 192);
+  width: 100%;
+  padding: 12px;
+}
+
+.songbuttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.songList ul{
+  padding: 10px 10px;
+}
+
+.songList ul li {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 12px 5px;
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.playNow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.playNow span {
+  font-size: 15px;
+  width: 80px;
 }
