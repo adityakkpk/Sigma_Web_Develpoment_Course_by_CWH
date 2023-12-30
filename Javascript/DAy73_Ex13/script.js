@@ -2,7 +2,7 @@ let cardsHTML = '';
 
 function createCard(image, title, cName, views, monthsOld, duration) {
     if(views>=1000 && views < 1000000){
-        views = (views/1000) + 'K'
+        views = (views/1000).toFixed(1) + 'K'
     } else if(views >= 1000000){
         views = (views/1000000).toFixed(1) + 'M'
     }
