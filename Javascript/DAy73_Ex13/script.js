@@ -1,8 +1,10 @@
 let cardsHTML = '';
 
 function createCard(image, title, cName, views, monthsOld, duration) {
-    if(views>=1000){
+    if(views>=1000 && views < 1000000){
         views = (views/1000) + 'K'
+    } else if(views >= 1000000){
+        views = (views/1000000).toFixed(1) + 'M'
     }
   cardsHTML += `
   <div class="card">
@@ -30,7 +32,7 @@ createCard(
     'https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLACwWOixJVrKLFindK92kYMgTcQbw',
     'Installing VS Code & How Websites Work | Sigma Web Development Course - Tutorial #1', 
     'CodeWithHarry', 
-    723000, 
+    7230000, 
     2, 
     '31:20'
 );
