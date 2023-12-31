@@ -34,8 +34,7 @@ html, body {
 }
 
 .library {
-  height: 76vh;
-  min-height: 50vh;
+  height: 75vh;
   position: relative;
   overflow: hidden;
 }
