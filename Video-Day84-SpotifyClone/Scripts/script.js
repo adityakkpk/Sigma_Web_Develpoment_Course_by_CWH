@@ -95,6 +95,15 @@ async function main (){
         document.querySelector('.circle').style.left = percent + '%';
         currentSong.currentTime = ((currentSong.duration )* percent) / 100;
     });
+
+    //Adding hamburger menu
+    document.querySelector('.hamburgur').addEventListener('click', () => {
+        document.querySelector('.left').style.left = 0;
+        // document.querySelector('.left').style.display = 'block';
+    });
+    document.querySelector('.close').addEventListener('click', () => {
+        document.querySelector('.left').style.left = '-120%';
+    });
 }
 
 main();
