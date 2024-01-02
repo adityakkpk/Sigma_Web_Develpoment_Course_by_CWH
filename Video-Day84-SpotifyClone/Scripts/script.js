@@ -1,8 +1,10 @@
 let currentSong = new Audio();
 
+let songs;
+
 function secondsToMinutes(seconds){
     if(isNaN(seconds) || seconds < 0){
-        return 'invalid Input';
+        return '00:00';
     }
 
     const minutes = Math.floor(seconds / 60);
@@ -41,7 +43,7 @@ const playMusic = (songName, pause=false) => {
 }
 
 async function main (){
-    let songs = await getSongs();
+    songs = await getSongs();
 
     playMusic(songs[0], true);
 
@@ -104,6 +106,34 @@ async function main (){
     document.querySelector('.close').addEventListener('click', () => {
         document.querySelector('.left').style.left = '-120%';
     });
+
+
+    //Previous and next buttons
+    previous.addEventListener('click', ()=> {  
+        let songIndex = songs.indexOf(currentSong.src.split("/").slice(-1)[0]);
+        if((songIndex - 1) >= 0)
+        playMusic(songs[songIndex - 1]);
+    });
+    next.addEventListener('click', ()=> {
+        let songIndex = songs.indexOf(currentSong.src.split("/").slice(-1)[0]);
+        if((songIndex + 1) < songs.length){
+            playMusic(songs[songIndex + 1]);
+        }
+    });
+
+    //Add event on volume
+    document.querySelector('.volume').addEventListener('click', ()=> {
+        document.querySelector('.range').classList.remove('hide');
+        
+        setTimeout(() => {
+            document.querySelector('.range').classList.add('hide');            
+        }, 5000);
+    });
+
+    document.querySelector('.range').getElementsByTagName('input')[0]
+        .addEventListener('change', (e)=> {
+            currentSong.volume = parseInt(e.target.value) / 100;
+        });
 }
 
 main();

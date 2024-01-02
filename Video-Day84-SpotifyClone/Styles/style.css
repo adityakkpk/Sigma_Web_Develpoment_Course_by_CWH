@@ -325,18 +325,48 @@ html, body {
   margin-top: 5px;
 }
 
+.timevol {
+  display: flex;
+  align-items: center;
+}
+
 .songinfo, .songtime {
   padding: 0 12px;
 }
 
+.songtime {
+  width: 150px;
+}
+
+.songinfo {
+  width: 350px;
+}
+
+.volume {
+  padding-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.range{
+  cursor: pointer;
+}
+
+.hide{
+  display: none;
+}
+
 @media (max-width:1400px) {
   .left {
-    background-color: black;
     position: absolute;
     left: -120%;
     z-index: 5;
     width: 300px;
     transition:  all 1s ease;
+    padding: 0;
   }
 
   .close {
@@ -347,7 +377,7 @@ html, body {
   }
 
   .library {
-    height: 75vh;
+    height: 80vh;
   }
 
   .right{
@@ -361,7 +391,6 @@ html, body {
 
   .playbar {
     margin: 15px;
-    font-size: 12px;
     width: 95vw;
     right: 0;
     bottom: 0;
@@ -392,17 +421,27 @@ html, body {
     display: none;
   }
 
-  .songbuttons img {
-    height: 25px;
-}
-}
-
-@media (max-height:700px){
-  .library {
-    height: 70vh;
+  .timevol {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 
-  .songList {
-    height: 340px;
+  .range input {
+    width: 80px;
+  }
+
+  .songbuttons img {
+    height: 25px;
+  }
+
+  .songinfo, .songtime {
+    width: auto;
+  }
+}
+
+@media (max-height:850px){
+  .library {
+    height: 78vh;
   }
 }
