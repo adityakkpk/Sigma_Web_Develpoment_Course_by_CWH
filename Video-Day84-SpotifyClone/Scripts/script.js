@@ -122,12 +122,12 @@ async function main (){
     });
 
     //Add event on volume
-    document.querySelector('.volume').addEventListener('click', ()=> {
+    document.querySelector('.volume').addEventListener('mouseover', ()=> {
         document.querySelector('.range').classList.remove('hide');
-        
-        setTimeout(() => {
-            document.querySelector('.range').classList.add('hide');            
-        }, 5000);
+    });
+    document.querySelector('.volume').addEventListener('mouseout', ()=> {
+        document.querySelector('.range').classList.remove('hide');      
+        document.querySelector('.range').classList.add('hide');   
     });
 
     document.querySelector('.range').getElementsByTagName('input')[0]
