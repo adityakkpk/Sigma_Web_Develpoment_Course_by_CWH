@@ -1,0 +1,22 @@
+{
+  "name": "designthelayout",
+  "version": "1.0.0",
+  "description": "this is the solution of ex17",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+  },
+  "keywords": [
+    "tailwind"
+  ],
+  "author": "aditya",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  },
+  "dependencies": {
+    "vite": "^5.0.12"
+  }
+}
