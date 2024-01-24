@@ -70,14 +70,28 @@
                 </ul>
             </div>
         </div>
-        <div class="second w-full border border-x-white border-y-black">
-            <div class="top flex justify-center border-b cursor-pointer">
-                <div class="left p-2 w-3/4 flex justify-center text-sm font-bold hover:bg-[#212121]">For You</div>
-                <div class="right p-2 w-3/4 flex justify-center text-sm font-bold hover:bg-[#212121] text-[#171717] hover:text-white">Following</div>
-                <div class="settings p-2 w-1/5 flex justify-center">
+        <div class="second w-full border border-x-gray-600 border-y-black">
+            <div class="top flex justify-center border-b border-gray-600 cursor-pointer relative">
+                <div class="left w-3/4 h-12 flex justify-center items-center text-sm font-bold hover:bg-[#212121]">For You</div>
+                <div class="right w-3/4 h-12 flex justify-center items-center text-sm font-bold hover:bg-[#212121] text-[#212121] hover:text-white">Following</div>
+                <div class="settings p-2 w-1/5 h-12 flex justify-center items-center">
                     <span class="material-symbols-outlined text-sm px-1 rounded-full hover:bg-[#212121]">
                         settings
                     </span>
+                </div>
+                <div class="absolute w-10 h-1 rounded-lg bg-blue-500 bottom-0 left-[17%] z-10"></div>
+            </div>
+            <div class="foryou flex gap-2 p-3">
+                <div>
+                    <img src="images/photojpg.jpg" alt="" class="w-10 h-9 rounded-full object-cover cursor-pointer">
+                </div>
+                <div class="w-full">
+                    <input type="text" placeholder="What is happenning?!" class="bg-black w-full p-2 text-xl outline-none">
+                    <div class="flex justify-center items-center text-sky-500 cursor-pointer hover:bg-sky-950 w-fit rounded-xl px-1 my-2 ml-2">
+                        <img src="images/earth.svg" alt="" class="invert text-sky-500 w-4 h-4">
+                        <span class="ml-1">Everyone can reply</span>
+                    </div>
+                    <div class="w-full h-[1px] bg-gray-600 mt-4"></div>
                 </div>
             </div>
         </div>
