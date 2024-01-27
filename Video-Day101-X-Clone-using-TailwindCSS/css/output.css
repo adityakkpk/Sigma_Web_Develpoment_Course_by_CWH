@@ -582,16 +582,44 @@ video {
   position: absolute;
 }
 
-.relative {
-  position: relative;
+.sticky {
+  position: sticky;
 }
 
 .bottom-0 {
   bottom: 0px;
 }
 
-.left-\[17\%\] {
-  left: 17%;
+.bottom-\[30\%\] {
+  bottom: 30%;
+}
+
+.left-\[20\%\] {
+  left: 20%;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+.bottom-\[20\%\] {
+  bottom: 20%;
+}
+
+.top-\[30\%\] {
+  top: 30%;
+}
+
+.top-\[70\%\] {
+  top: 70%;
+}
+
+.top-\[50\%\] {
+  top: 50%;
+}
+
+.top-\[55\%\] {
+  top: 55%;
 }
 
 .z-10 {
@@ -602,23 +630,19 @@ video {
   margin: 0.75rem;
 }
 
-.m-auto {
-  margin: auto;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
 }
 
+.my-1 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-}
-
-.my-4 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
 }
 
 .ml-1 {
@@ -649,8 +673,16 @@ video {
   margin-top: 1rem;
 }
 
+.block {
+  display: block;
+}
+
 .flex {
   display: flex;
+}
+
+.hidden {
+  display: none;
 }
 
 .h-1 {
@@ -671,10 +703,6 @@ video {
 
 .h-\[1px\] {
   height: 1px;
-}
-
-.h-\[1\.5px\] {
-  height: 1.5px;
 }
 
 .w-1\/5 {
@@ -789,10 +817,10 @@ video {
   border-color: rgb(75 85 99 / var(--tw-border-opacity));
 }
 
-.border-x-gray-600 {
+.border-x-gray-700 {
   --tw-border-opacity: 1;
-  border-left-color: rgb(75 85 99 / var(--tw-border-opacity));
-  border-right-color: rgb(75 85 99 / var(--tw-border-opacity));
+  border-left-color: rgb(55 65 81 / var(--tw-border-opacity));
+  border-right-color: rgb(55 65 81 / var(--tw-border-opacity));
 }
 
 .border-y-black {
@@ -829,6 +857,48 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[black\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-\[\] {
+  background-color: ;
+}
+
+.bg-\[00000\] {
+  background-color: 00000;
+}
+
+.bg-\[\#00000\] {
+  background-color: #00000;
+}
+
+.bg-\[\#000000\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#000000d6\] {
+  background-color: #000000d6;
+}
+
+.bg-\[\#000000a4\] {
+  background-color: #000000a4;
+}
+
+.bg-\[\#00000073\] {
+  background-color: #00000073;
+}
+
+.bg-\[\#000000f7\] {
+  background-color: #000000f7;
+}
+
+.bg-\[\#000000fc\] {
+  background-color: #000000fc;
 }
 
 .object-cover {
@@ -885,10 +955,6 @@ video {
 
 .pl-4 {
   padding-left: 1rem;
-}
-
-.pr-16 {
-  padding-right: 4rem;
 }
 
 .pr-7 {
@@ -1009,4 +1075,22 @@ video {
 
 .hover\:underline:hover {
   text-decoration-line: underline;
+}
+
+@media (min-width: 768px) {
+  .md\:block {
+    display: block;
+  }
+
+  .md\:hidden {
+    display: none;
+  }
+
+  .md\:w-\[70\%\] {
+    width: 70%;
+  }
+
+  .md\:pr-12 {
+    padding-right: 3rem;
+  }
 }
