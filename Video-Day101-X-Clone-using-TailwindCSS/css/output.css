@@ -590,32 +590,12 @@ video {
   bottom: 0px;
 }
 
-.bottom-\[30\%\] {
-  bottom: 30%;
-}
-
 .left-\[20\%\] {
   left: 20%;
 }
 
 .top-0 {
   top: 0px;
-}
-
-.bottom-\[20\%\] {
-  bottom: 20%;
-}
-
-.top-\[30\%\] {
-  top: 30%;
-}
-
-.top-\[70\%\] {
-  top: 70%;
-}
-
-.top-\[50\%\] {
-  top: 50%;
 }
 
 .top-\[55\%\] {
@@ -738,6 +718,14 @@ video {
   width: 100%;
 }
 
+.w-7 {
+  width: 1.75rem;
+}
+
+.w-5 {
+  width: 1.25rem;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -772,6 +760,10 @@ video {
 
 .gap-3 {
   gap: 0.75rem;
+}
+
+.gap-4 {
+  gap: 1rem;
 }
 
 .space-y-2 > :not([hidden]) ~ :not([hidden]) {
@@ -829,6 +821,10 @@ video {
   border-bottom-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
+.bg-\[\#000000fc\] {
+  background-color: #000000fc;
+}
+
 .bg-\[\#16181c\] {
   --tw-bg-opacity: 1;
   background-color: rgb(22 24 28 / var(--tw-bg-opacity));
@@ -857,48 +853,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-\[black\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
-.bg-\[\] {
-  background-color: ;
-}
-
-.bg-\[00000\] {
-  background-color: 00000;
-}
-
-.bg-\[\#00000\] {
-  background-color: #00000;
-}
-
-.bg-\[\#000000\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#000000d6\] {
-  background-color: #000000d6;
-}
-
-.bg-\[\#000000a4\] {
-  background-color: #000000a4;
-}
-
-.bg-\[\#00000073\] {
-  background-color: #00000073;
-}
-
-.bg-\[\#000000f7\] {
-  background-color: #000000f7;
-}
-
-.bg-\[\#000000fc\] {
-  background-color: #000000fc;
 }
 
 .object-cover {
@@ -953,6 +907,11 @@ video {
   padding-bottom: 1px;
 }
 
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
 .pl-4 {
   padding-left: 1rem;
 }
@@ -983,6 +942,20 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-\[35px\] {
+  font-size: 35px;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .font-bold {
@@ -1022,6 +995,10 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-\[\] {
+  color: ;
 }
 
 .outline-none {
