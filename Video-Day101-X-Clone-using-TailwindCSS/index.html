@@ -68,15 +68,27 @@
                         <img src="images/more.svg" alt="" class="invert w-7">
                         <div class="hidden md:block ">More</div>
                     </li>
-                    <li class="flex justify-start items-center gap-3 cursor-pointer w-full hover:rounded-full py-2">
+                    <li class="flex justify-center items-center gap-3 cursor-pointer w-full hover:rounded-full py-2">
                         <button class="hidden md:block py-3 border-none w-full bg-sky-500 font-bold rounded-full">Post</button>
-                        <button class="block md:hidden py-3 border-none px-4 bg-sky-500 font-bold rounded-full">
+                        <button class="block md:hidden md:py-3 py-1 px-2 border-none md:px-4 mr-5 md:m-0 bg-sky-500 rounded-full">
                             <span class="material-symbols-outlined">
                                 draw
                             </span>
                         </button>
                     </li>
                 </ul>
+            </div>
+            <div class="userprofile sticky top-[90vh] my-10 justify-end hidden md:flex mx-5">
+                <div class="item hover:bg-[#2d2f35] cursor-pointer p-3 flex px-4 gap-7 rounded-full w-fit">
+                    <div class="flex gap-3 justify-center items-center">
+                        <img src="images/photojpg.jpg" alt="" class="w-10 h-10 rounded-full object-cover">
+                        <div>
+                            <div class="font-bold hover:underline">Aditya Kumar</div>
+                            <div class="text-sm text-gray-400">@akkpk</div>
+                        </div>
+                    </div>
+                    <div class="text-2xl">...</div>
+                </div> 
             </div>
         </div>
         <div class="second w-full border border-x-gray-700 border-y-black">
@@ -366,6 +378,65 @@
                 </div>
                 <div class="w-full h-[1px] bg-gray-600 mt-4"></div>
 
+                <div class="post flex cursor-pointer">
+                    <div class="image m-3">
+                        <img class="w-14 rounded-full" src="images/photojpg.jpg" alt="">
+                    </div>
+                    <div class="contant my-2">
+                        <span class="font-bold hover:underline text-white">
+                            Aditya Kumar
+                        </span>
+                        <span class="text-gray-600">
+                            &nbsp; @akkpk &bull; 2h
+                        </span>
+                        <div>
+                            Happy Republic Day
+                        </div>
+
+                        <div class="post-Img mr-2 my-2">
+                            <img class="rounded-xl" src="https://pbs.twimg.com/media/GExYhSvWsAACFTL?format=jpg&name=small" alt="">
+                        </div>
+
+                        <div class="post-analytics flex w-[95%] mr-2 mt-1 justify-between text-gray-600">
+                            <div class="reply flex justify-center items-center">
+                                <span class="material-symbols-outlined text-lg px-1 rounded-full hover:bg-sky-800 hover:text-white">
+                                    chat_bubble
+                                </span> 
+                                <span class="text-sm">22</span>
+                            </div>
+                            <div class="reply flex justify-center items-center  text-lg">
+                                <span class="material-symbols-outlined text-lg px-1 rounded-full hover:bg-green-800 hover:text-white">
+                                    repeat
+                                </span>
+                                <span class="text-sm">22</span> 
+                            </div>
+                            <div class="reply flex justify-center items-center  text-lg">
+                                <span class="material-symbols-outlined text-lg px-1 rounded-full hover:bg-pink-800 hover:text-white">
+                                    favorite
+                                </span>
+                                <span class="text-sm">22</span> 
+                            </div>
+                            <div class="reply flex justify-center items-center  text-lg">
+                                <span class="material-symbols-outlined text-lg px-1 rounded-full hover:bg-sky-800 hover:text-white">
+                                    <span class="material-symbols-outlined">
+                                        bar_chart
+                                    </span>
+                                </span>
+                                <span class="text-sm">22</span> 
+                            </div>
+                            <div class="reply flex justify-center items-center  text-lg">
+                                <span class="material-symbols-outlined text-lg px-1 rounded-full hover:bg-sky-800 hover:text-white">
+                                    bookmark
+                                </span>
+                                <span class="material-symbols-outlined text-lg px-1 rounded-full hover:bg-sky-800 hover:text-white">
+                                    ios_share
+                                </span>                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full h-[1px] bg-gray-600 mt-4"></div>
+
             </div>
         </div>
         <div class="third w-full hidden md:block">
@@ -373,7 +444,7 @@
                 <input type="text" class="w-3/4 rounded-full bg-[#16181c] text-white p-2 pl-4 my-1" placeholder="Search">
             </div>
 
-            <div class="whats sticky top-0 w-3/4 ml-3 rounded-2xl bg-[#16181c] overflow-hidden">
+            <div class="whats sticky top-[7vh] w-3/4 ml-3 rounded-2xl bg-[#16181c] overflow-hidden">
                 <h1 class="text-xl font-bold m-3 pt-1">What's Happenning</h1>
                 <div class="item hover:bg-[#2d2f35] cursor-pointer p-3">
                     <div class="text-sm text-gray-400">
@@ -381,14 +452,6 @@
                     </div>
                     <div class="font-bold ">#rammandir</div>
                     <div class="text-sm text-gray-400">60m Posts</div>
-                </div>
-                
-                <div class="item hover:bg-[#2d2f35] cursor-pointer p-3">
-                    <div class="text-sm text-gray-400">
-                        Trending in India
-                    </div>
-                    <div class="font-bold ">#jayshriram</div>
-                    <div class="text-sm text-gray-400">125k Posts</div>
                 </div>
                 
                 <div class="item hover:bg-[#2d2f35] cursor-pointer p-3">
@@ -408,7 +471,7 @@
                 </div>                
             </div>
             
-            <div class="who z-10 sticky top-[55%] w-3/4 ml-3 m-3 rounded-2xl bg-[#16181c] overflow-hidden">
+            <div class="who z-10 sticky top-[50%] w-3/4 ml-3 m-3 rounded-2xl bg-[#16181c] overflow-hidden">
                 <h1 class="text-xl font-bold m-3 pt-1">Who to follow</h1>
                         
                 <div class="item hover:bg-[#2d2f35] cursor-pointer p-3 flex justify-between px-4">
@@ -447,6 +510,16 @@
                 <div class="item hover:bg-[#2d2f35] cursor-pointer p-3">
                     <div class="text-blue-700 hover:underline">Show more</div>
                 </div> 
+            </div>
+
+            <div class="tc w-3/4 ml-3 m-4 sticky top-[93vh]">
+                <span class="hover:underline cursor-pointer mr-2">Terms of Service</span>
+                <span class="hover:underline cursor-pointer mr-2">Privacy Policy</span>
+                <span class="hover:underline cursor-pointer mr-2">Cookie Policy</span>
+                <span class="hover:underline cursor-pointer mr-2">Accessibility</span>
+                <span class="hover:underline cursor-pointer mr-2">Ads info</span>
+                <span class="hover:underline cursor-pointer mr-2">More</span>
+                <span class="hover:underline cursor-pointer mr-2">© 2024 X Corp.</span>
             </div>
         </div>
     </div>
