@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+    <style>
+        .box{
+            color: red;
+            height: 121px;
+            width: 121px;
+            margin: 3px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body> 
+    <div class="box box1">I am box 1</div>
+    <div class="box box2">I am box 2</div>
+    <div class="box box3">I am box 3</div>
+    <div class="box box4">I am box 4</div>
+</body>
+<script>
+    setTimeout(() => {
+        document.querySelector('.box1').innerHTML = "hey";
+    }, 1000);
+    setTimeout(() => {
+        document.querySelector('.box2').innerHTML = "hey";
+    }, 2000);
+    setTimeout(() => {
+        document.querySelector('.box3').innerHTML = "hey";
+    }, 3000);
+    setTimeout(() => {
+        document.querySelector('.box4').innerHTML = "hey";
+    }, 4000);
+</script>
+</html>
