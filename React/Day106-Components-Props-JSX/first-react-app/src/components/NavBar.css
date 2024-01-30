@@ -1,4 +1,16 @@
-body {
-    background: #000;
-    color: white;
+nav, ul {
+    display: flex;
+}
+
+nav {
+    background-color: beige;
+    padding: 23px;
+}
+
+li {
+    list-style-type: none;
+}
+
+ul {
+    gap: 34px;
 }
