@@ -17,6 +17,15 @@ const NavBar = ({ color }) => {
   useEffect(() => {
     alert("Hey I am running because color was changed")
   }, [color])
+
+  //Example of cleanup() function
+  useEffect(() => {
+    alert("Hey welcome to the page, this is the first render of app.jsx");
+    //Cleanup function {Optional} : This function will run when component will unmount
+    return ()=> {
+      alert("Component was unmounted")
+    }
+  }, []);
   
 
   return <div>I am NavBar of {color} color hehehe...</div>;
