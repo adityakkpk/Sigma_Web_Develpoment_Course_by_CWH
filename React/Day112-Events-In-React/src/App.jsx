@@ -3,7 +3,9 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
-  const [name, setName] = useState("Aditya")
+  // const [name, setName] = useState("Aditya")
+  const [form, setForm] = useState({})
+  // const [form, setForm] = useState({email: "", phone: ""})
 
   const handleClick = () => {
     alert("I am clicked");
@@ -13,8 +15,10 @@ function App() {
     alert('Hey i am mouse over')
   }
 
-  const hanldeChange = (e) => {
-    setName(e.target.value)
+  const handleChanges = (e) => {
+    // setName(e.target.value)
+    setForm({...form, [e.target.name]:e.target.value})
+    console.log(form)
   }
 
   return (
@@ -27,7 +31,8 @@ function App() {
         I am red
       </div> */}
 
-      <input type="text" value={name} onChange={hanldeChange}/>
+      <input type="text" name='email' value={form.email?form.email:""} onChange={handleChanges}/>
+      <input type="text" name='phone' value={form.phone?form.phone:""} onChange={handleChanges}/>
     </>
   )
 }
