@@ -7,35 +7,35 @@
 
 ### In this course i studied about:
 
-## HTML
+## 1.HTML
 
 From Day 1 to Day 13
 
-## CSS
+## 2.CSS
 
 From day 14 to Day 51
 
-## JavaScript
+## 3.JavaScript
 
 From day 52  to day 83
 
-## Node.js
+## 4.Node.js
 
 From day 84  to day 87
 
-## Express.js
+## 5.Express.js
 
 From day 88 to day 93
 
-## MongoDB and Mongoose
+## 6.MongoDB and Mongoose
 
 From day 94 to day 98
 
-## Tailwind CSS
+## 7.Tailwind CSS
 
 From Day 99 to day 102
 
-## React
+## 8.React
 
 From day 103  to day 106
 
