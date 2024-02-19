@@ -19,6 +19,11 @@ function App() {
       setTodos(todos);
     }
   }, [])
+
+  // To handle LocalStorage Problem when Deleting Todos
+  if(todos.length === 0){
+    localStorage.clear();
+  }
   
 
   const saveToLS = () => {
