@@ -18,12 +18,7 @@ function App() {
       let todos = JSON.parse(localStorage.getItem('todos'));
       setTodos(todos);
     }
-  }, [])
-
-  // To handle LocalStorage Problem when Deleting Todos
-  if(todos.length === 0){
-    localStorage.clear();
-  }
+  }, []);
   
 
   const saveToLS = () => {
