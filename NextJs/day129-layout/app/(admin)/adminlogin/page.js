@@ -1,5 +1,4 @@
 import React from 'react'
-
 const page = () => {
   return (
     <div>
@@ -10,3 +9,10 @@ const page = () => {
 }
 
 export default page
+
+// Dynamic Meta data
+export async function generateMetadata({ params }){
+  return {
+    title : 'Login Kar',
+  }
+}
