@@ -11,9 +11,9 @@ function Navbar() {
             </div>
             <ul>
                 <li className='flex gap-4'>
-                    <a href="/" className='hover:font-bold'>Home</a>
-                    <a href="#" className='hover:font-bold'>About</a>
-                    <a href="#" className='hover:font-bold'>Contacts</a>
+                    <a href="/" className='hover:font-bold hover:text-gray-400'>Home</a>
+                    <a href="#" className='hover:font-bold hover:text-gray-400'>About</a>
+                    <a href="#" className='hover:font-bold hover:text-gray-400'>Contacts</a>
                 </li>
             </ul>
         </div>
