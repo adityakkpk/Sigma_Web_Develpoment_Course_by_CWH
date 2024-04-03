@@ -2,37 +2,35 @@ import React, { useEffect, useState } from "react";
 import { useRef } from "react";
 
 function Manager() {
-
   const ref = useRef();
 
-  const [form, setForm] = useState({site: "", username: "", password: ""});
+  const [form, setForm] = useState({ site: "", username: "", password: "" });
   const [passwordArr, setPasswordArr] = useState([]);
 
-  
   useEffect(() => {
     let passwords = localStorage.getItem("passwords");
-    if(passwords){
+    if (passwords) {
       setPasswordArr(JSON.parse(passwords));
     }
-  }, [])
+  }, []);
 
   const showPassword = () => {
-    if(ref.current.src.includes("/eye-off.svg")){
-      ref.current.src = "/eye.svg"
-    }else {
-      ref.current.src = "/eye-off.svg"
+    if (ref.current.src.includes("/eye-off.svg")) {
+      ref.current.src = "/eye.svg";
+    } else {
+      ref.current.src = "/eye-off.svg";
     }
-  }
+  };
 
   const savePassword = () => {
-    setPasswordArr([...passwordArr, form])
+    setPasswordArr([...passwordArr, form]);
     localStorage.setItem("passwords", JSON.stringify([...passwordArr, form]));
-    console.log([...passwordArr, form])
-  }
+    console.log([...passwordArr, form]);
+  };
 
   const handleChange = (e) => {
-    setForm({...form, [e.target.name]:[e.target.value]})
-  }
+    setForm({ ...form, [e.target.name]: [e.target.value] });
+  };
 
   return (
     <>
@@ -67,7 +65,7 @@ function Manager() {
               value={form.username}
               onChange={handleChange}
             />
-            <div className="relative">             
+            <div className="relative">
               <input
                 name="password"
                 className="rounded-full border border-green-500 w-full py-1 px-4"
@@ -76,21 +74,18 @@ function Manager() {
                 value={form.password}
                 onChange={handleChange}
               />
-              <span 
-                className="absolute right-2 top-1 mt-[4px] cursor-pointer"
-                
-              >
+              <span className="absolute right-2 top-1 mt-[4px] cursor-pointer">
                 <img
-                  onClick={showPassword} 
-                  ref={ref} 
-                  src="/eye.svg" 
-                  alt="eye" 
+                  onClick={showPassword}
+                  ref={ref}
+                  src="/eye.svg"
+                  alt="eye"
                 />
               </span>
             </div>
           </div>
 
-          <button 
+          <button
             className="flex justify-center items-center bg-green-500 hover:bg-green-400 rounded-full w-fit px-5 py-2 text-lg gap-2 font-bold hover:border border-green-950"
             onClick={savePassword}
           >
@@ -100,6 +95,34 @@ function Manager() {
             ></lord-icon>
             Add Password
           </button>
+        </div>
+        
+        <div className="passwords">
+          <h2 className="text-2xl py-4 font-bold">Your Passwords</h2>
+          {passwordArr.length === 0 && <div>No Passwords to show</div>}
+          {passwordArr.length !== 0 && <table className="table-auto w-full overflow-hidden rounded-md">
+            <thead className="bg-green-600 text-white">
+              <tr>
+                <th className="py-2">Site</th>
+                <th className="py-2">UserName</th>
+                <th className="py-2">Password</th>
+              </tr>
+            </thead>
+            <tbody className="bg-green-100">
+              {passwordArr.map((password, index) => {
+                return <tr key={index}>
+                <td className="py-2 border border-white text-center w-32">
+                  <a href={`https://` + password.site} target="_blank">
+                  {password.site}
+                  </a>
+                </td>
+                <td className="py-2 border border-white text-center w-32">{password.username}</td>
+                <td className="py-2 border border-white text-center w-32">{password.password}</td>
+              </tr>
+              })}
+              
+            </tbody>
+          </table>}
         </div>
       </div>
     </>
