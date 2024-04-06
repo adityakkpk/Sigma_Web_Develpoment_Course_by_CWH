@@ -3,6 +3,7 @@ import { useRef } from "react";
 
 function Manager() {
   const ref = useRef();
+  const passRef = useRef();
 
   const [form, setForm] = useState({ site: "", username: "", password: "" });
   const [passwordArr, setPasswordArr] = useState([]);
@@ -15,10 +16,13 @@ function Manager() {
   }, []);
 
   const showPassword = () => {
+    passRef.current.type = 'password';
     if (ref.current.src.includes("/eye-off.svg")) {
       ref.current.src = "/eye.svg";
+      passRef.current.type = 'password';
     } else {
       ref.current.src = "/eye-off.svg";
+      passRef.current.type = 'text';
     }
   };
 
@@ -38,7 +42,7 @@ function Manager() {
         <div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#C9EBFF,transparent)]"></div>
       </div>
 
-      <div className="mycontainer">
+      <div className="mycontainer pt-20">
         <h1 className="text-4xl text font-bold text-center">
           <span className="text-green-600">&lt;</span>
           <span>Password</span>
@@ -73,6 +77,7 @@ function Manager() {
                 placeholder="Password"
                 value={form.password}
                 onChange={handleChange}
+                ref={passRef}
               />
               <span className="absolute right-2 top-1 mt-[4px] cursor-pointer">
                 <img
@@ -100,12 +105,12 @@ function Manager() {
         <div className="passwords">
           <h2 className="text-2xl py-4 font-bold">Your Passwords</h2>
           {passwordArr.length === 0 && <div>No Passwords to show</div>}
-          {passwordArr.length !== 0 && <table className="table-auto w-full overflow-hidden rounded-md">
+          {passwordArr.length !== 0 && <table className="table-auto w-full overflow-hidden rounded-md mb-3">
             <thead className="bg-green-600 text-white">
-              <tr>
-                <th className="py-2">Site</th>
-                <th className="py-2">UserName</th>
-                <th className="py-2">Password</th>
+              <tr className="border">
+                <th className="py-2 border border-white">Websites</th>
+                <th className="py-2 border border-white">UserName</th>
+                <th className="py-2 border border-white">Password</th>
               </tr>
             </thead>
             <tbody className="bg-green-100">
