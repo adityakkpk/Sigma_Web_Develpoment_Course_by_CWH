@@ -16,25 +16,28 @@ function Manager() {
   }, []);
 
   const showPassword = () => {
-    passRef.current.type = 'password';
+    passRef.current.type = "password";
     if (ref.current.src.includes("/eye-off.svg")) {
       ref.current.src = "/eye.svg";
-      passRef.current.type = 'password';
+      passRef.current.type = "password";
     } else {
       ref.current.src = "/eye-off.svg";
-      passRef.current.type = 'text';
+      passRef.current.type = "text";
     }
   };
 
   const savePassword = () => {
     setPasswordArr([...passwordArr, form]);
     localStorage.setItem("passwords", JSON.stringify([...passwordArr, form]));
-    console.log([...passwordArr, form]);
   };
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: [e.target.value] });
   };
+
+  const copyText = (text) => {
+    navigator.clipboard.writeText(text);
+  }
 
   return (
     <>
@@ -101,33 +104,49 @@ function Manager() {
             Add Password
           </button>
         </div>
-        
+
         <div className="passwords">
           <h2 className="text-2xl py-4 font-bold">Your Passwords</h2>
           {passwordArr.length === 0 && <div>No Passwords to show</div>}
-          {passwordArr.length !== 0 && <table className="table-auto w-full overflow-hidden rounded-md mb-3">
-            <thead className="bg-green-600 text-white">
-              <tr className="border">
-                <th className="py-2 border border-white">Websites</th>
-                <th className="py-2 border border-white">UserName</th>
-                <th className="py-2 border border-white">Password</th>
-              </tr>
-            </thead>
-            <tbody className="bg-green-100">
-              {passwordArr.map((password, index) => {
-                return <tr key={index}>
-                <td className="py-2 border border-white text-center w-32">
-                  <a href={`https://` + password.site} target="_blank">
-                  {password.site}
-                  </a>
-                </td>
-                <td className="py-2 border border-white text-center w-32">{password.username}</td>
-                <td className="py-2 border border-white text-center w-32">{password.password}</td>
-              </tr>
-              })}
-              
-            </tbody>
-          </table>}
+          {passwordArr.length !== 0 && (
+            <table className="table-auto w-full overflow-hidden rounded-md mb-3">
+              <thead className="bg-green-600 text-white">
+                <tr className="border">
+                  <th className="py-2 border border-white">Websites</th>
+                  <th className="py-2 border border-white">UserName</th>
+                  <th className="py-2 border border-white">Password</th>
+                </tr>
+              </thead>
+              <tbody className="bg-green-100">
+                {passwordArr.map((password, index) => {
+                  return (
+                    <tr key={index}>
+                      <td className="py-2 border border-white text-center w-32">
+                        <div className="flex justify-center items-center gap-2 cursor-pointer">
+                          <a href={`https://` + password.site} target="_blank">
+                            {password.site}
+                          </a>
+                          <img src="/copy-btn.svg" alt="copy-btn" width={15} onClick={()=>copyText(password.site)} />
+                        </div>
+                      </td>
+                      <td className="py-2 border border-white text-center w-32">
+                        <div className="flex justify-center items-center gap-2 cursor-pointer">
+                          {password.username}
+                          <img src="/copy-btn.svg" alt="copy-btn" width={15} onClick={()=>copyText(password.username)} />
+                        </div>
+                      </td>
+                      <td className="py-2 border border-white text-center w-32">
+                        <div className="flex justify-center items-center gap-2 cursor-pointer">
+                          {password.password}
+                          <img src="/copy-btn.svg" alt="copy-btn" width={15} onClick={()=>copyText(password.password)} />
+                        </div>
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          )}
         </div>
       </div>
     </>
