@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useRef } from "react";
+import { ToastContainer, toast } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
 
 function Manager() {
   const ref = useRef();
@@ -36,11 +39,36 @@ function Manager() {
   };
 
   const copyText = (text) => {
+    toast("Copied to clipboard", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
     navigator.clipboard.writeText(text);
-  }
+  };
 
   return (
     <>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        transition="Bounce"
+      />
+      {/* Same as */}
+      <ToastContainer />
       <div className="absolute inset-0 -z-10 h-full w-full bg-green-100 bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]">
         <div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#C9EBFF,transparent)]"></div>
       </div>
@@ -101,7 +129,7 @@ function Manager() {
               src="https://cdn.lordicon.com/jgnvfzqg.json"
               trigger="hover"
             ></lord-icon>
-            Add Password
+            Save Password
           </button>
         </div>
 
@@ -115,6 +143,7 @@ function Manager() {
                   <th className="py-2 border border-white">Websites</th>
                   <th className="py-2 border border-white">UserName</th>
                   <th className="py-2 border border-white">Password</th>
+                  <th className="py-2 border border-white">Actions</th>
                 </tr>
               </thead>
               <tbody className="bg-green-100">
@@ -126,20 +155,43 @@ function Manager() {
                           <a href={`https://` + password.site} target="_blank">
                             {password.site}
                           </a>
-                          <img src="/copy-btn.svg" alt="copy-btn" width={15} onClick={()=>copyText(password.site)} />
+                          <img
+                            src="/copy-btn.svg"
+                            alt="copy-btn"
+                            width={15}
+                            onClick={() => copyText(password.site)}
+                          />
                         </div>
                       </td>
                       <td className="py-2 border border-white text-center w-32">
                         <div className="flex justify-center items-center gap-2 cursor-pointer">
                           {password.username}
-                          <img src="/copy-btn.svg" alt="copy-btn" width={15} onClick={()=>copyText(password.username)} />
+                          <img
+                            src="/copy-btn.svg"
+                            alt="copy-btn"
+                            width={15}
+                            onClick={() => copyText(password.username)}
+                          />
                         </div>
                       </td>
                       <td className="py-2 border border-white text-center w-32">
                         <div className="flex justify-center items-center gap-2 cursor-pointer">
                           {password.password}
-                          <img src="/copy-btn.svg" alt="copy-btn" width={15} onClick={()=>copyText(password.password)} />
+                          <img
+                            src="/copy-btn.svg"
+                            alt="copy-btn"
+                            width={15}
+                            onClick={() => copyText(password.password)}
+                          />
                         </div>
+                      </td>
+                      <td className="py-2 border border-white text-center w-32">
+                        <button className="border border-white  mx-2 px-2 py-1 rounded bg-slate-200">
+                        📝 
+                        </button>
+                        <button className="border border-white  mx-2 px-2 py-1 rounded bg-slate-200">
+                        🗑
+                        </button>
                       </td>
                     </tr>
                   );
