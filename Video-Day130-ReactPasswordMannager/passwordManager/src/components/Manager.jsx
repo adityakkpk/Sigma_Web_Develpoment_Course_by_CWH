@@ -122,7 +122,7 @@ function Manager() {
         <div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#C9EBFF,transparent)]"></div>
       </div>
 
-      <div className="md:mycontainer px-2 md:px-0 pt-20 min-h-[93vh]">
+      <div className="md:mycontainer px-2 md:px-0 pt-20 min-h-[91.5vh]">
         <h1 className="text-4xl text font-bold text-center">
           <span className="text-green-600">&lt;</span>
           <span>Password</span>
