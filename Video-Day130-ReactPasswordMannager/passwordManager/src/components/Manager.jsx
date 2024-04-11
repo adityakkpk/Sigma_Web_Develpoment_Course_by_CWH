@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useRef } from "react";
 import { ToastContainer, toast } from "react-toastify";
+import { v4 as uuidv4 } from "uuid";
 
 import "react-toastify/dist/ReactToastify.css";
 
@@ -30,8 +31,56 @@ function Manager() {
   };
 
   const savePassword = () => {
-    setPasswordArr([...passwordArr, form]);
-    localStorage.setItem("passwords", JSON.stringify([...passwordArr, form]));
+    if (
+      form.site[0].length > 3 &&
+      form.username[0].length > 3 &&
+      form.password[0].length > 3
+    ) {
+      setPasswordArr([...passwordArr, { ...form, id: uuidv4() }]);
+      localStorage.setItem(
+        "passwords",
+        JSON.stringify([...passwordArr, { ...form, id: uuidv4() }])
+      );
+      setForm({ site: "", username: "", password: "" });
+      toast("Password saved!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
+    } else {
+      toast("Error: Password not saved!");
+    }
+  };
+
+  const deletePassword = (id) => {
+    let c = confirm("Are you sure want to delete the password?");
+    if (c) {
+      setPasswordArr(passwordArr.filter((item) => item.id !== id));
+      localStorage.setItem(
+        "passwords",
+        JSON.stringify(passwordArr.filter((item) => item.id !== id))
+      );
+      toast("Password Deleted", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
+    }
+  };
+
+  const editPassword = (id) => {
+    setForm(passwordArr.filter((item) => item.id === id)[0]);
+    setPasswordArr(passwordArr.filter((item) => item.id !== id));
   };
 
   const handleChange = (e) => {
@@ -73,7 +122,7 @@ function Manager() {
         <div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#C9EBFF,transparent)]"></div>
       </div>
 
-      <div className="mycontainer pt-20">
+      <div className="md:mycontainer px-2 md:px-0 pt-20 min-h-[93vh]">
         <h1 className="text-4xl text font-bold text-center">
           <span className="text-green-600">&lt;</span>
           <span>Password</span>
@@ -91,7 +140,7 @@ function Manager() {
             value={form.site}
             onChange={handleChange}
           />
-          <div className="flex w-full gap-8 justify-between">
+          <div className="flex flex-col md:flex-row w-full gap-8 justify-between">
             <input
               name="username"
               className="rounded-full border border-green-500 w-full py-1 px-4"
@@ -112,7 +161,7 @@ function Manager() {
               />
               <span className="absolute right-2 top-1 mt-[4px] cursor-pointer">
                 <img
-                  onClick={showPassword}
+                  onClick={() => showPassword()}
                   ref={ref}
                   src="/eye.svg"
                   alt="eye"
@@ -186,11 +235,17 @@ function Manager() {
                         </div>
                       </td>
                       <td className="py-2 border border-white text-center w-32">
-                        <button className="border border-white  mx-2 px-2 py-1 rounded bg-slate-200">
-                        📝 
+                        <button
+                          className="border border-white  mx-2 px-2 py-1 rounded bg-slate-200"
+                          onClick={() => editPassword(password.id)}
+                        >
+                          📝
                         </button>
-                        <button className="border border-white  mx-2 px-2 py-1 rounded bg-slate-200">
-                        🗑
+                        <button
+                          className="border border-white  mx-2 px-2 py-1 rounded bg-slate-200"
+                          onClick={() => deletePassword(password.id)}
+                        >
+                          🗑
                         </button>
                       </td>
                     </tr>
